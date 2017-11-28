@@ -1,0 +1,19 @@
+\documentclass[12pt]{article} % For master thesis use \documentclass[12pt]{report}
+\usepackage{generators/imports}
+\include{generators/glossary}
+\begin{document}
+\include{generators/frontpage}
+\include{generators/tableOfContentsAndListings}
+\include{generators/abstract}
+\setcounter{page}{1}
+
+
+\input{chapter/introduction}
+
+
+\clearpage
+\printglossary[style=super, type=\acronymtype]
+\bibliographystyle{plainnat}  %Set the type of bib you want to use in the text.
+\bibliography{generators/refs}
+
+\end{document}
