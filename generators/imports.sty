@@ -28,6 +28,8 @@
 \usepackage[raggedright,bf,sf]{titlesec}
 \usepackage{fullpage}
 \usepackage{xcolor}
+\usepackage{etoolbox}
+\patchcmd{\abstract}{\null\vfil}{}{}{}
 \usepackage{listings}
 \lstset{basicstyle=\ttfamily,
   showstringspaces=false,
