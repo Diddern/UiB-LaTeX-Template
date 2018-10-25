@@ -1,6 +1,62 @@
 \chapter{Introduction}
-The first chapter of a well-structured thesis is always an introduction, setting the scene with background, problem description, objectives, limitations, and then looking ahead to summarize what is in the rest of the report. This is the part that readers look at first---\emph{so make sure it hooks them!}
+
+Natum mucius vim id. Tota detracto ei sed, id sumo sapientem sed. Vim in nostro latine gloriatur, cetero vocent vim id. Erat sanctus eam te, nec assueverit necessitatibus ex, id delectus fabellas has.
+
+Lorem ipsum dolor sit amet, iisque feugait quo eu, sed vocent commodo aliquid an. Minim suavitate dissentiet te eos. Dicunt eirmod adolescens no sed. Esse nonumy melius an mel, mei ut maiorum luptatum. Eu eum iudico scripta, movet option assueverit mel ex, mea at odio noluisse efficiendi. Ad vidisse atomorum conceptam quo, saepe volumus philosophia eos eu, delenit conceptam no usu.
+
+Vituperata sadipscing deterruisset ei mel, at qui nonumy blandit. Delectus dissentiet et sea, ut rebum regione numquam nam, cum ex augue constituto. Te per nihil semper. Posse voluptatum qui an, aliquando democritum disputando id quo, everti perpetua cu vim. Laudem fabellas mei an, eu reprimique quaerendum usu. Quidam prompta fabellas ne est.
 
 \section{Background}
-In this section, you should present the problem that you are going to investigate or analyze; why this problem is of interest; what has, so far, been done to solve the problem, and which parts of the problem that remain.
-Remember to cite stuff~\cite{FowlerTechnicalDebt}, and use acronyms like \gls{saas} and \gls{saas}
+
+Lorem ipsum dolor sit amet, cu graecis propriae sea. Eam feugiat docendi an, ei scripta blandit pri. Nonumes delicata reprimique nam ut. Eu suas alterum concludaturque est, ferri mucius sensibus id sed~\cite{raftAlg}.
+
+We can do glossary for acronymes and abriviations also: \gls{saas}. As you see the first time it is used, the full version is used, but the second time we use \gls{saas} the short form is used. It is also a link to the lookup.
+
+
+\subsection{Listings}
+You can do listings, like in Listing~\ref{ListingReference}
+\begin{lstlisting}[caption={[Short caption]Look at this cool listing. Find the rest in Appendix~\ref{Listing}},label=ListingReference]
+$ java -jar myAwesomeCode.jar
+\end{lstlisting}
+
+You can also do language highlighting for instance with Golang:
+And in line~\ref{LineThatDoesSomething} of Listing~\ref{ListingGolang} you can see that we can ref to lines in listings.
+
+\begin{lstlisting}[caption={Hello world in Golang},label=ListingGolang,escapechar=|]
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("hello world") |\label{LineThatDoesSomething}|
+}
+
+\end{lstlisting}
+
+\subsection{Figures}
+
+Example of a centred figure
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{figures/Flowchart}
+    \caption{Caption for flowchart}
+  	\medskip 
+	\hspace*{15pt}\hbox{\scriptsize Credit: Acme company makes everything \url{https://acme.com/}}
+    \label{FlowchartFigure}
+\end{figure}
+
+\subsection{Tables}
+
+We can also do tables. Protip: use \url{https://www.tablesgenerator.com/} for generating tables.
+\begin{table}[H]
+\centering
+\caption{Caption of table}
+\label{TableLabel}
+\begin{tabular}{|l|l|l|}
+\hline
+Title1 & Title2 & Title3 \\ \hline
+data1  & data2  & data3  \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{}

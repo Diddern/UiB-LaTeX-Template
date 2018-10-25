@@ -1,15 +1,14 @@
-\usepackage[onehalfspacing]{setspace}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\pagestyle{headings}
+\usepackage[utf8]{inputenc} % This defines the font-\usepackage[utf8]{inputenc}
 \usepackage{url}
 \def\UrlBreaks{\do\/\do-}
+\usepackage[square, numbers]{natbib}
 \usepackage{booktabs}
-\usepackage{natbib}
-\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
+\usepackage{floatpag}
 \usepackage{xcolor}
 \usepackage{caption}
 \usepackage{float}
+\usepackage{geometry}
 \usepackage{wrapfig}
 \usepackage{amssymb}
 \usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
@@ -18,29 +17,51 @@
 \usepackage{marvosym}
 \usepackage[integrals]{wasysym}
 \usepackage{latexsym}
+\DeclareRobustCommand{\VAN}[3]{#2}
 \usepackage{amssymb}
+
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
 \usepackage{hyperref}
 \tolerance=1000
 \usepackage{amsmath}
-\usepackage{hyperref}
+\usepackage{titlesec}
 \usepackage{setspace}
 \onehalfspacing
-\usepackage[raggedright,bf,sf]{titlesec}
 \usepackage{fullpage}
-\usepackage{xcolor}
-\usepackage{etoolbox}
-\patchcmd{\abstract}{\null\vfil}{}{}{}
+\graphicspath{{figures/}}
+
 \usepackage{listings}
-\lstset{basicstyle=\ttfamily,
-  showstringspaces=false,
-  commentstyle=\color{gray},
-  keywordstyle=\color{blue}
+\usepackage{generators/listings-golang} 	
+\lstset{
+    frame=single,
+    basicstyle=\linespread{0.8}\footnotesize\ttfamily,
+    keywordstyle=\color{red},
+    numbers=left,
+    numbersep=5pt,
+    showstringspaces=false, 
+    stringstyle=\color{blue},
+    commentstyle=\color{gray},
+    breakatwhitespace=true,
+    breaklines=true,
+    postbreak=\mbox{\textcolor{violet}{$\hookrightarrow$}\space},
+    tabsize=4,
+    language=Golang
 }
 
-%This is where date format on the frontpage is set.
+\newlength\glsdescwidth
+  \setlength{\glsdescwidth}{1\hsize}
+
 \usepackage{datetime}
 \newdateformat{monthyeardate}{%
   \monthname[\THEMONTH], \THEYEAR}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
 
 \usepackage{enumitem, kantlipsum}
 \renewcommand{\maketitle}{}
@@ -53,6 +74,5 @@
   \pltopsep=\medskipamount
   \plitemsep=1pt
   \plparsep=1pt
-
+  
 \usepackage[acronym,nonumberlist,toc,nogroupskip]{glossaries}
-\usepackage{glossary-superragged}
